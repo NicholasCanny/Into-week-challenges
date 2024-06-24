@@ -31,7 +31,7 @@ skipTest(
     check(createObject(["name", "shaq"])).isEqualTo({ name: "shaq" });
     check(createObject(["fruit", "apple"])).isEqualTo({ fruit: "apple" });
     check(createObject(["language", "haskell"])).isEqualTo({
-      language: "haskell"
+      language: "haskell",
     });
   }
 );
@@ -47,7 +47,7 @@ skipTest("getFirstNItems() returns the first n items in an array", function () {
   check(getFirstNItems(["apple", "banana", "pear", "kiwi"], 3)).isEqualTo([
     "apple",
     "banana",
-    "pear"
+    "pear",
   ]);
 });
 
@@ -79,19 +79,19 @@ skipTest(
       "b",
       "c",
       "d",
-      "a"
+      "a",
     ]);
     check(moveItemToEnd(["a", "b", "c", "d"], 2)).isEqualTo([
       "a",
       "b",
       "d",
-      "c"
+      "c",
     ]);
     check(moveItemToEnd(["a", "b", "c", "d"], 1)).isEqualTo([
       "a",
       "c",
       "d",
-      "b"
+      "b",
     ]);
   }
 );
@@ -126,8 +126,8 @@ skipTest("updateUserAge() updates the user's age", function () {
     personalDetails: {
       name: "Alex",
       age: 39,
-      favFood: "gooseberry fool"
-    }
+      favFood: "gooseberry fool",
+    },
   };
 
   updateUserAge(user1);
@@ -138,8 +138,8 @@ skipTest("updateUserAge() updates the user's age", function () {
     personalDetails: {
       name: "Alex",
       age: 40,
-      favFood: "gooseberry fool"
-    }
+      favFood: "gooseberry fool",
+    },
   });
 
   const user2 = {
@@ -148,8 +148,8 @@ skipTest("updateUserAge() updates the user's age", function () {
     personalDetails: {
       name: "Poonam",
       age: 19,
-      favFood: "caviar"
-    }
+      favFood: "caviar",
+    },
   };
 
   updateUserAge(user2);
@@ -160,8 +160,8 @@ skipTest("updateUserAge() updates the user's age", function () {
     personalDetails: {
       name: "Poonam",
       age: 20,
-      favFood: "caviar"
-    }
+      favFood: "caviar",
+    },
   });
 });
 
@@ -208,7 +208,7 @@ skipTest(
         "thoughts",
         "cloud",
         "computer",
-        "cups"
+        "cups",
       ])
     ).isEqualTo(["abcs", "humans", "thoughts", "cups"]);
   }
@@ -231,12 +231,12 @@ skipTest(
       makeAllAdmins([
         { name: "Barry", admin: false },
         { name: "Sandeep", admin: true },
-        { name: "Kavita", admin: false }
+        { name: "Kavita", admin: false },
       ])
     ).isEqualTo([
       { name: "Barry", admin: true },
       { name: "Sandeep", admin: true },
-      { name: "Kavita", admin: true }
+      { name: "Kavita", admin: true },
     ]);
   }
 );

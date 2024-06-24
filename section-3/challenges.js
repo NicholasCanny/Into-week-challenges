@@ -1,6 +1,5 @@
 const { check, runTest, skipTest } = require("../test-api/index.js");
 
-
 //Exercise 1
 function countProperties() {
   // This function should take an object as its argument and return the total number of properties it contains
@@ -125,7 +124,7 @@ skipTest(
       "1p": 1,
       "2p": 0,
       "5p": 0,
-      "10p": 0
+      "10p": 0,
     });
     check(
       updateCoinMachine({ "1p": 0, "2p": 0, "5p": 0, "10p": 0 }, "2p")
@@ -133,7 +132,7 @@ skipTest(
       "1p": 0,
       "2p": 1,
       "5p": 0,
-      "10p": 0
+      "10p": 0,
     });
     check(
       updateCoinMachine({ "1p": 0, "2p": 3, "5p": 0, "10p": 0 }, "2p")
@@ -141,7 +140,7 @@ skipTest(
       "1p": 0,
       "2p": 4,
       "5p": 0,
-      "10p": 0
+      "10p": 0,
     });
     check(
       updateCoinMachine({ "1p": 0, "2p": 3, "5p": 10, "10p": 0 }, "5p")
@@ -149,7 +148,7 @@ skipTest(
       "1p": 0,
       "2p": 3,
       "5p": 11,
-      "10p": 0
+      "10p": 0,
     });
     check(
       updateCoinMachine({ "1p": 0, "2p": 3, "5p": 10, "10p": 0 }, "10p")
@@ -229,21 +228,21 @@ skipTest("addCoins() will update the coins in a given slot", function () {
     [],
     ["2p", "2p"],
     [],
-    []
+    [],
   ]);
   check(addCoins([[], [], [], []], "5p")).isEqualTo([[], [], ["5p"], []]);
   check(addCoins([["1p"], [], [], ["10p", "10p"]], "2p")).isEqualTo([
     ["1p"],
     ["2p"],
     [],
-    ["10p", "10p"]
+    ["10p", "10p"],
   ]);
   check(addCoins([[], [], ["5p", "5p"], []], "5p")).isEqualTo([
     [],
     [],
     ["5p", "5p", "5p"],
-    []
+    [],
   ]);
 });
 
-// Mark your progress on the Learn 2 Code platform before moving on to the next set of challenges! 
+// Mark your progress on the Learn 2 Code platform before moving on to the next set of challenges!

@@ -1,6 +1,10 @@
+// Hello nosey!
+// You don't need to be in here but feel free to look around if you're a curious soul.
+
 function customStringify(item) {
   function replacer(key, value) {
-    if (typeof value === "function") return `[Function: ${value.name || "(anonymous)"}]`;
+    if (typeof value === "function")
+      return `[Function: ${value.name || "(anonymous)"}]`;
     // if undefined value is nested
     if (typeof value === "undefined" && key !== "") return "undefined";
     return value;
@@ -12,14 +16,28 @@ function check(value) {
   function isEqualTo(expected) {
     if (!checkDeeplyEqual(value, expected))
       throw new Error(
-        `${customStringify(value)}\n is not equal to the expected value of\n ${customStringify(expected)}`
+        `${customStringify(
+          value
+        )}\n is not equal to the expected value of\n ${customStringify(
+          expected
+        )}`
       );
   }
-  return { isEqualTo };
+  function isOfType(type) {
+    if (typeof value !== type) {
+      throw new Error(`${customStringify(value)}\n is not of type \n ${type}`);
+    }
+  }
+  return { isEqualTo, isOfType };
 }
 
 function checkDeeplyEqual(coll1, coll2) {
-  if (typeof coll1 !== "object" || typeof coll2 !== "object" || coll1 === null || coll2 === null)
+  if (
+    typeof coll1 !== "object" ||
+    typeof coll2 !== "object" ||
+    coll1 === null ||
+    coll2 === null
+  )
     return coll1 === coll2;
 
   if (Object.keys(coll1).length !== Object.keys(coll2).length) return false;
@@ -59,4 +77,10 @@ function skipTest(title) {
   printYellowMessage(`skipping... ${title}`);
 }
 
-module.exports = { check, runTest, skipTest, printGreenMessage, printRedMessage };
+module.exports = {
+  check,
+  runTest,
+  skipTest,
+  printGreenMessage,
+  printRedMessage,
+};

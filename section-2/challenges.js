@@ -70,7 +70,7 @@ skipTest(
 
 // Challenge 5
 function isInThe20thCentury() {
-  // This function should take a number as an argument representing a year, 
+  // This function should take a number as an argument representing a year,
   // and return true if that year is in the 20th century and false otherwise.
 }
 
@@ -197,6 +197,25 @@ skipTest("collectStrings() can get all the strings from an array", function () {
   check(collectStrings(["a", "b", "c"])).isEqualTo(["a", "b", "c"]);
   check(collectStrings(["a", 10, "b", 1000, "c"])).isEqualTo(["a", "b", "c"]);
 });
+
+// Challenge 11
+function greetingGenerator() {
+  return () => {};
+  // This function should take a name as an argument and return a new function which returns "Hello <name>"
+}
+
+skipTest(
+  "greetingGenerator() should return a function that can be invoked to greet a user",
+  () => {
+    const greetRose = greetingGenerator("Rose");
+    const greetDavid = greetingGenerator("David");
+    check(greetRose).isOfType("function");
+    check(greetDavid).isOfType("function");
+
+    check(greetRose).isEqualTo("Hello, Rose!");
+    check(greetDavid).isEqualTo("Hello, David!");
+  }
+);
 
 /******* Refactor Bonus Challenge *******
 

@@ -1,8 +1,8 @@
-const { check, runTest, skipTest } = require('../test-api/index.js');
+const { check, runTest, skipTest } = require("../test-api/index.js");
 
 // Exercise 1
-runTest('checking multiTypeArray', function () {
-  const multiTypeArray = ['I am a string', 42, true, [1, 2, 3]];
+runTest("checking multiTypeArray", function () {
+  const multiTypeArray = ["I am a string", 42, true, [1, 2, 3]];
 
   check(FILL_ME_IN).isEqualTo(typeof multiTypeArray[0]);
   check(FILL_ME_IN).isEqualTo(typeof multiTypeArray[1]);
@@ -12,10 +12,10 @@ runTest('checking multiTypeArray', function () {
 
 // Exercise 2
 // once you have passed the test above, change skipTest below to runTest so you are able to run the next test
-skipTest('checking alphaSample', function () {
-  const alphaSample = ['a', 'b', 'c'];
-  alphaSample.push('d');
-  alphaSample.push('g');
+skipTest("checking alphaSample", function () {
+  const alphaSample = ["a", "b", "c"];
+  alphaSample.push("d");
+  alphaSample.push("g");
 
   check(FILL_ME_IN).isEqualTo(alphaSample);
 
@@ -27,11 +27,11 @@ skipTest('checking alphaSample', function () {
 
 // Exercise 3
 // once you have passed the test above, change skipTest below to runTest so you are able to run the next test
-skipTest('working with nested arrays', function () {
+skipTest("working with nested arrays", function () {
   const rows = [
-    ['a', 'b', 'c'],
-    ['d', 'e', 'f'],
-    ['g', 'h', 'i'],
+    ["a", "b", "c"],
+    ["d", "e", "f"],
+    ["g", "h", "i"],
   ];
 
   check(FILL_ME_IN).isEqualTo(rows[0]);
@@ -39,20 +39,20 @@ skipTest('working with nested arrays', function () {
   check(FILL_ME_IN).isEqualTo(rows[2]);
 
   const firstRow = rows[0];
-  check(firstRow[0]).isEqualTo('a');
-  check(firstRow[FILL_ME_IN]).isEqualTo('b');
+  check(firstRow[0]).isEqualTo("a");
+  check(firstRow[FILL_ME_IN]).isEqualTo("b");
 
-  check(rows[1][FILL_ME_IN]).isEqualTo('e');
-  check(rows[2][FILL_ME_IN]).isEqualTo('g');
-  check(rows[0][FILL_ME_IN]).isEqualTo('c');
+  check(rows[1][FILL_ME_IN]).isEqualTo("e");
+  check(rows[2][FILL_ME_IN]).isEqualTo("g");
+  check(rows[0][FILL_ME_IN]).isEqualTo("c");
 });
 
 // Exercise 4
 // once you have passed the test above, change skipTest below to runTest so you are able to run the next test
-skipTest('check object properties', function () {
+skipTest("check object properties", function () {
   const father = {
-    firstName: 'Michael',
-    lastName: 'Bluth',
+    firstName: "Michael",
+    lastName: "Bluth",
     age: 33,
   };
 
@@ -64,11 +64,11 @@ skipTest('check object properties', function () {
 
 // Exercise 5
 // once you have passed the test above, change skipTest below to runTest so you are able to run the next test
-skipTest('remove object properties', function () {
+skipTest("remove object properties", function () {
   const brotherInLaw = {
-    name: 'Tobias',
-    lastname: 'Funke',
-    job: 'therapist',
+    name: "Tobias",
+    lastname: "Funke",
+    job: "therapist",
   };
 
   check(FILL_ME_IN).isEqualTo(brotherInLaw.job);
@@ -78,21 +78,21 @@ skipTest('remove object properties', function () {
 
 // Exercise 6
 // once you have passed the test above, change skipTest below to runTest so you are able to run the next test
-skipTest('working with nested objects', function () {
+skipTest("working with nested objects", function () {
   const bluthFamily = {
     father: {
-      name: 'George',
+      name: "George",
     },
     mother: {
-      name: 'Lucille',
+      name: "Lucille",
     },
-    sons: [{ name: 'GOB' }, { name: 'Michael' }, { name: 'Buster' }],
-    daughters: [{ name: 'Lindsay' }],
+    sons: [{ name: "GOB" }, { name: "Michael" }, { name: "Buster" }],
+    daughters: [{ name: "Lindsay" }],
   };
 
   check(FILL_ME_IN).isEqualTo(bluthFamily.father.name);
   check(bluthFamily.mother.name).isEqualTo(FILL_ME_IN);
-  check(bluthFamily.daughters[FILL_ME_IN].FILL_ME_IN).isEqualTo('Lindsay');
+  check(bluthFamily.daughters[FILL_ME_IN].FILL_ME_IN).isEqualTo("Lindsay");
 });
 
 // >>>>>>>>>>> DON'T ALTER ANYTHING BELOW THIS LINE <<<<<<<<<<<<<<<
