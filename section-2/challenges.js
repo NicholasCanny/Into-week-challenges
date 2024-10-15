@@ -212,8 +212,8 @@ skipTest(
     check(greetRose).isOfType("function");
     check(greetDavid).isOfType("function");
 
-    check(greetRose).isEqualTo("Hello, Rose!");
-    check(greetDavid).isEqualTo("Hello, David!");
+    check(greetRose()).isEqualTo("Hello, Rose!");
+    check(greetDavid()).isEqualTo("Hello, David!");
   }
 );
 
